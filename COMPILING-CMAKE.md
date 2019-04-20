@@ -1,31 +1,31 @@
-#Disclaimer
-
-**WARNING**: CMake build is **NOT** official and should be used for *dev purposes ONLY*.
+> **WARNING**: CMake build is **NOT** official and should be used for *dev purposes ONLY*.
 
 For official way to build CataclysmDDA See:
   * The latest instructions on how to compile can be found on [our wiki](http://tools.cataclysmdda.com/wiki).
   * [COMPILING.md](https://github.com/CleverRaven/Cataclysm-DDA/blob/master/COMPILING.md)
 
 
-#Contents
+# Contents
 
-  1. Prerequisites
-  2. Build Environment
-    * UNIX Environment
-    * Windows Environment
-  3. CMake Build
-    * MinGW,MSYS,MSYS2
-  5. Build Options
-    * CMake specific options
-    * CataclysmDDA specific options
+  1. [Prerequisites](#prerequisites)
+  2. [Build environment](#environment)
+    * [UNIX environment](#unix-environment)
+    * [Windows environment (MSYS2)](#msys-environment)
+  3. [CMake build](#build)
+    * [MSYS + MinGW](#build-msys)
+    * [Visual Studio / MSBuild](#build-vstudio-msbuild)
+  4. [Build options](#build-options)
+    * [CMake-specific](#cmake-build-options)
+    * [Cataclysm-specific](#cataclysm-build-options)
 
-#1. Prerequisites
+<a id="prerequisites"></a>
+# Prerequisites
 
 You'll need to have these libraries and their development headers installed in
-order to build CataclysmDDA:
+order to build Cataclysm-DDA:
 
  * General
-   * `cmake`                     >= 3.0.0
+   * `cmake`     >= 3.0.0
    * `gcc-libs`
    * `glibc`
    * `zlib`
@@ -35,10 +35,10 @@ order to build CataclysmDDA:
  * Curses
    * `ncurses`
  * Tiles
-   * `SDL`                       >= 2.0.0
-   * `SDL_image`                 >= 2.0.0 (with PNG and JPEG support)
-   * `SDL_mixer`                 >= 2.0.0 (with Ogg Vorbis support)
-   * `SDL_ttf`                   >= 2.0.0
+   * `SDL`       >= 2.0.0
+   * `SDL_image` >= 2.0.0 (with PNG and JPEG support)
+   * `SDL_mixer` >= 2.0.0 (with Ogg Vorbis support)
+   * `SDL_ttf`   >= 2.0.0
    * `freetype`
  * Sound
    * `vorbis`
@@ -48,17 +48,20 @@ order to build CataclysmDDA:
    * `iconv`
 
 
-#2. Build Environment
+<a id="environment"></a>
+# Build environment
 
 You can obtain the source code tarball for the latest version from [git](https://github.com/CleverRaven/Cataclysm-DDA).
 
 
-## UNIX Environment
+<a id="unix-environment"></a>
+## UNIX environment
 
 Obtain packages specified above with your system package manager.
 
 
-## Windows Environment (MSYS2)
+<a id="msys-environment"></a>
+## Windows environment (MSYS2)
 
  1. Follow steps from here: https://msys2.github.io/
  2. Install CataclysmDDA build deps:
@@ -89,7 +92,8 @@ Obtain packages specified above with your system package manager.
        installed packages.
 
 
-# CMake Build
+<a id="cmake-build"></a>
+# CMake build
 
  CMake has separate configuration and build steps. Configuration
  is done using CMake itself, and the actual build is done using either `make`
@@ -99,7 +103,7 @@ Obtain packages specified above with your system package manager.
  outside of it. Out-of-source builds have the advantage that you can have
  multiple builds with different options from one source directory.
 
- **WARNING**: Inside the source tree build is **NOT** supported.
+ > **WARNING**: Inside the source tree build is **NOT** supported.
 
  To build CataclysmDDA out of source:
 
@@ -132,11 +136,12 @@ The above example creates a build directory inside the source directory, but tha
  ```
 
 
-## CMake Build for MSYS2 (MinGW)
+<a id="build-msys"></a>
+## MSYS + MinGW
 
  **NOTE**: For development purposes it is preferred to use `MinGW Win64 Shell` or `MinGW Win32 Shell` instead of `MSYS2 Shell`. In other case, you will need to set `PATH` variable manually.
 
- For Mingw,MSYS,MSYS2 you should set [Makefiles generator](https://cmake.org/cmake/help/v3.0/manual/cmake-generators.7.html) to "MSYS Makefiles".
+ For MinGW, MSYS, MSYS2 you should set [Makefiles generator](https://cmake.org/cmake/help/v3.0/manual/cmake-generators.7.html) to "MSYS Makefiles".
  Setting it to "MinGW Makefiles" might work as well, but might also require additional hackery.
 
   Example:
@@ -205,7 +210,8 @@ The above example creates a build directory inside the source directory, but tha
    * `libvorbisfile-3.dll`
 
 
-## CMake Build for Visual Studio / MSBuild
+<a id="build-vstudio-msbuild"></a>
+## Visual Studio / MSBuild
 
 CMake can generate  `.sln` and `.vcxproj` files used either by Visual Studio itself or by MSBuild command line compiler (if you don't want
 a full fledged IDE) and have more "native" binaries than what MSYS/Cygwin can provide.
@@ -262,7 +268,8 @@ The copying of dlls is a one-time task, but you'd need to move the binary out of
 Run the game. Should work.
 
 
-# Build Options
+<a id="build-options"></a>
+# Build options
 
  A full list of options supported by CMake, you may either run the `ccmake`
  or `cmake-gui` front-ends, or run `cmake` and open the generated CMakeCache.txt
@@ -273,7 +280,8 @@ Run the game. Should work.
  ```
 
 
-## CMake specific options
+<a id="cmake-build-options"></a>
+## CMake-specific
 
  * CMAKE_BUILD_TYPE=`<build type>`
 
@@ -291,7 +299,8 @@ Run the game. Should work.
  Installation prefix for binaries, resources, and documentation files.
 
 
-## CataclysmDDA specific options
+<a id="cataclysm-build-options"></a>
+## Cataclysm-specific
 
  * CURSES=`<boolean>`
 
