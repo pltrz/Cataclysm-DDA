@@ -78,12 +78,12 @@ Obtain packages specified above with your system package manager.
 
 ```
 $ pacman -S mingw-w64-i686-toolchain msys/git \
-          mingw-w64-i686-cmake \
-          mingw-w64-i686-SDL2_image \
-          mingw-w64-i686-SDL2_mixer \
-          mingw-w64-i686-SDL2_ttf \
-          ncurses-devel \
-          gettext-devel
+            mingw-w64-i686-cmake              \
+            mingw-w64-i686-SDL2_image         \
+            mingw-w64-i686-SDL2_mixer         \
+            mingw-w64-i686-SDL2_ttf           \
+            ncurses-devel                     \
+            gettext-devel
 ```
 
 This should get your environment set up to build console and tiles version of windows.
@@ -91,12 +91,12 @@ This should get your environment set up to build console and tiles version of wi
 > **NOTE**: This is only for 32 bit builds. 64 bit requires the x86_64 instead of the i686 packages listed above:
 
 ```
-$ pacman -S mingw-w64-x86_64-toolchain msys/git \
-            mingw-w64-x86_64-cmake \
+$ pacman -S mingw-w64-x86_64-toolchain msys/git   \
+            mingw-w64-x86_64-cmake                \
             mingw-w64-x86_64-SDL2_image,mixer,ttf \
-            mingw-w64-x86_64-SDL2_mixer \
-            mingw-w64-x86_64-SDL2_ttf \
-            ncurses-devel \
+            mingw-w64-x86_64-SDL2_mixer           \
+            mingw-w64-x86_64-SDL2_ttf             \
+            ncurses-devel                         \
             gettext-devel
 ```
 
