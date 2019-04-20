@@ -45,7 +45,25 @@ You'll need to have these libraries and their development headers installed in o
 <a id="environment"></a>
 # Build environment
 
-You can obtain the source code tarball for the latest version from [git](https://github.com/CleverRaven/Cataclysm-DDA).
+You can obtain the source tree from the remote repository.
+
+```
+$ git clone https://github.com/CleverRaven/Cataclysm-DDA.git
+```
+
+This will fetch the latest development branch. In addition, if you want a specific release, you can list available tags and checkout.
+
+```
+$ git tag --list
+...
+0.A
+0.B
+0.C
+0.D
+...
+
+$ git checkout tags/0.D
+```
 
 <a id="unix-environment"></a>
 ## UNIX environment
