@@ -7,16 +7,16 @@ For official way to build CataclysmDDA See:
 
 # Contents
 
-  1. [Prerequisites](#prerequisites)
-  2. [Build environment](#environment)
-    * [UNIX environment](#unix-environment)
-    * [Windows environment (MSYS2)](#msys-environment)
-  3. [CMake build](#build)
-    * [MSYS + MinGW](#build-msys)
-    * [Visual Studio / MSBuild](#build-vstudio-msbuild)
-  4. [Build options](#build-options)
-    * [CMake-specific](#cmake-build-options)
-    * [Cataclysm-specific](#cataclysm-build-options)
+1. [Prerequisites](#prerequisites)
+2. [Build environment](#environment)
+	* [UNIX environment](#unix-environment)
+	* [Windows environment (MSYS2)](#msys-environment)
+3. [CMake build](#build)
+	* [MSYS + MinGW](#build-msys)
+	* [Visual Studio / MSBuild](#build-vstudio-msbuild)
+4. [Build options](#build-options)
+	* [CMake-specific](#cmake-build-options)
+	* [Cataclysm-specific](#cataclysm-build-options)
 
 <a id="prerequisites"></a>
 # Prerequisites
