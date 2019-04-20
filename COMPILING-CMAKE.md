@@ -1,8 +1,7 @@
 > **WARNING**: CMake build is **NOT** official and should be used for *dev purposes ONLY*.
 
-For official way to build CataclysmDDA See:
-  * The latest instructions on how to compile can be found on [our wiki](http://tools.cataclysmdda.com/wiki).
-  * [COMPILING.md](https://github.com/CleverRaven/Cataclysm-DDA/blob/master/COMPILING.md)
+For the official way to build CataclysmDDA See:
+The official way to build Cataclysm-DDA is documented in [COMPILING.md](../COMPILING.md).
 
 
 # Contents
@@ -30,7 +29,7 @@ order to build Cataclysm-DDA:
    * `glibc`
    * `zlib`
    * `bzip2`
- * Optional
+ * Localization
    * `gettext`
  * Curses
    * `ncurses`
