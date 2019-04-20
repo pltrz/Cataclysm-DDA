@@ -1,7 +1,7 @@
 > **WARNING**: CMake build is **NOT** official and should be used for *dev purposes ONLY*.
 
 For the official way to build CataclysmDDA See:
-The official way to build Cataclysm-DDA is documented in [COMPILING.md](../COMPILING.md).
+The official way to build Cataclysm-DDA is documented in [COMPILING.md](./COMPILING.md).
 
 
 # Contents
